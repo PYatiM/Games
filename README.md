@@ -1,2 +1,2 @@
 # Games
-Small game that i made using python
+Utilities and games made using python, html , css and javascript
