@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Farm‑Game Pomodoro</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <div class="background-farm"></div>
+    <div class="center-content">
+      <div class="timer-panel">
+        <h1>🌾 Pomodoro Timer</h1>
+        <div class="tabs">
+          <button data-mode="pomodoro" class="tab active">Focus 🌱</button>
+          <button data-mode="shortBreak" class="tab">Break 🍅</button>
+          <button data-mode="longBreak" class="tab">Rest 🌻</button>
+        </div>
+        <div class="timer-box">
+          <svg width="220" height="220">
+            <circle cx="110" cy="110" r="100" class="background"/>
+            <circle cx="110" cy="110" r="100" class="progress"/>
+          </svg>
+          <div id="timerDisplay">25:00</div>
+          <div id="timerLabel">Focus Time</div>
+        </div>
+        <div class="controls">
+          <button id="startBtn" class="farm-btn">Start</button>
+          <button id="pauseBtn" class="farm-btn hidden">Pause</button>
+          <button id="resetBtn" class="farm-btn">Reset</button>
+        </div>
+        <div class="session-counter">Completed: <span id="sessionCount">0</span></div>
+        <button id="settingsBtn" class="farm-btn">Settings ⚙️</button>
+      </div>
+      <div id="settingsPanel" class="settings-panel hidden">
+        <h2>Settings</h2>
+        <label>Pomodoro: <input type="number" id="pomodoroTime" min="1" value="25"></label>
+        <label>Short Break: <input type="number" id="shortBreakTime" min="1" value="5"></label>
+        <label>Long Break: <input type="number" id="longBreakTime" min="1" value="15"></label>
+        <label><input type="checkbox" id="autoStartBreaks"> Auto-start breaks</label>
+        <label><input type="checkbox" id="soundEnabled" checked> Sound alert</label>
+        <div class="panel-controls">
+          <button id="saveSettings" class="farm-btn">Save</button>
+          <button id="closeSettings" class="farm-btn">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
