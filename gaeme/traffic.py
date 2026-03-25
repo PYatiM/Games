@@ -1,3 +1,5 @@
+# simple rule-based ground truth added in gen lab method
+
 import random
 
 class Traffic:
@@ -13,7 +15,6 @@ class Traffic:
         }
 
     def generate_label(self):
-        # simple rule-based ground truth
         if self.features["request_rate"] > 70 or self.features["error_rate"] > 0.7:
             return "attack"
         return "normal"
